@@ -1,0 +1,23 @@
+ 		if (sorting.OrderBy != null || sorting.OrderBy.Length != 0)
+                    {
+                        queryBuilder.Append("ORDER BY \"Restaurant\".");
+                        queryBuilder.Append("\""+sorting.OrderBy+"\"" + " ");
+                    }
+                    else
+                    {
+                        queryBuilder.Append("ORDER BY \"Name\" ");
+                    }
+                    if (sorting.SortOrder != null || sorting.SortOrder.Length != 0)
+                    {
+                        queryBuilder.Append(sorting.SortOrder + " ");
+                    }
+                    else
+                    {
+                        queryBuilder.Append("ASC ");
+                    }
+                    queryBuilder.Append("LIMIT " + paging.PageSize + " ");
+                    queryBuilder.Append("OFFSET " + paging.CurrentPageNumber + " ");
+  		    queryBuilder.Append("OFFSET " + paging.LastValue + " ");
+                    command.CommandText = queryBuilder.ToString();
+                    connection.CreateCommand();
+                    await connection.OpenAsync();
