@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>nba</title>
+    <link rel="stylesheet" href="NBA.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+
+    <div class="form-container">
+        <h1>Add Players</h1>
+        <hr>
+        <form id="addPlayers">
+
+            <div class="inputField">
+                <label for="Name"> Name:</label>
+                <input type="text" id="Name" required>
+            </div>
+            <div class="inputField">
+                <label for="Age">Age:</label>
+                <input type="number" id="age" required>
+            </div>
+            <div class="inputFiled">
+                <label for="club">Club:</label>
+                <input type="text" id="club" required>
+            </div>
+            <div class="inputFiled">
+                <label for="Height">Height:</label>
+                <input type="number" id="Height" required>
+            </div>
+            <div class="inputFiled">
+                <label for="Position">Position:</label>
+                <input type="text" id="Position" required>
+            </div>
+            <div class="inputField">
+                <button type="submit">Add player</button>
+            </div>
+        </form>
+    </div>
+    </div>
+
+
+    <div class="items-grid"></div>
+
+    <table id="addPlayers">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Club</th>
+                <th>Height</th>
+                <th>Position</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+
+</html>
